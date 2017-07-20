@@ -1,6 +1,6 @@
 // 初始化游戏history
 var hasLucky = localStorage.getItem('sisiea_lottery_has');
-var gameTime = localStorage.getItem('sisiea_lottery_time');
+var gameTime = localStorage.getItem('sisiea_lottery_time_1');
 
 if (!hasLucky) {
     localStorage.setItem('sisiea_lottery_has', 0);
@@ -10,7 +10,7 @@ else {
 }
 if (!gameTime) {
     gameTime = 0;
-    localStorage.setItem('sisiea_lottery_time', gameTime);
+    localStorage.setItem('sisiea_lottery_time_1', gameTime);
 }
 else {
     gameTime = parseInt(gameTime);
@@ -37,7 +37,7 @@ img.onload = function () {
             lottery.setResult(preResult[gameTime]);
         }
         gameTime++;
-        localStorage.setItem('sisiea_lottery_time', gameTime);
+        localStorage.setItem('sisiea_lottery_time_1', gameTime);
         
     })
     lottery.on('end', function () {
